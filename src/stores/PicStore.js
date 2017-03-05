@@ -1,6 +1,8 @@
 import { observable, computed, action } from 'mobx';
 import singleton from 'singleton';
-// 从目前来看不需要使用数据观察对象，只需要对状态进行管理
+// 这里出了一个问题
+// 不应该是打开一页面就读取一张
+// 维护本子的所有信息
 class PicStore extends singleton {
   // 需要一个状态机,
   @observable state = 0;
@@ -13,7 +15,9 @@ class PicStore extends singleton {
     // this.Pictures = [];
     // 一个本子的信息
     this.GalleryInfo = {};
-    // 一张图片的地址
+    // 需要有一个维护所有图片地址的
+    this.picList = [];
+    // 当前图片的地址
     this.Picture = {};
   }
 

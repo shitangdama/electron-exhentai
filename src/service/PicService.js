@@ -1,5 +1,4 @@
-const remote = window.require('electron').remote;
-const cheerio = remote.require('cheerio');
+import cheerio from 'cheerio';
 
 export function getGalleriesList(body) {
   const galleriesArray = [];

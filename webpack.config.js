@@ -5,6 +5,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [path.resolve(__dirname, './src/index.js')],
+  target: 'electron-renderer',
   output: {
     path: path.resolve(__dirname, './build'),
     filename: 'bundle.js',
