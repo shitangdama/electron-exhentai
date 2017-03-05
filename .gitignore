@@ -4,3 +4,6 @@ old
 
 #debug
 npm-debug*
+
+#ide
+/.vscode
