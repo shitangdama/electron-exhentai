@@ -1,9 +1,0 @@
-# Dependency directory
-node_modules
-old
-
-#debug
-npm-debug*
-
-#ide
-/.vscode
