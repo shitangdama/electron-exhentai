@@ -2,17 +2,13 @@ import { Card, CardActions, CardHeader, CardMedia, CardText, CardTitle } from 'm
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 
-import request from 'request';
-
 import CircularProgress from 'material-ui/CircularProgress';
 import autobind from 'autobind-decorator';
 import { getEhWebPage } from '../service/UrlService';
 import { getPic } from '../service/PicService';
-<<<<<<< HEAD
-import { withRouter } from 'react-router-dom';
-=======
+import request from 'request';
+
 // import { remote } from 'electron';
->>>>>>> c8aa78b7aeb023e8fb2faf82dd6d0b1d3011350a
 
 // const remote = window.require('electron').remote;
 // const request = remote.require('request');
