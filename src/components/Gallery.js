@@ -1,14 +1,15 @@
+import { Card, CardActions, CardHeader, CardMedia, CardText, CardTitle } from 'material-ui/Card';
 import React, { Component } from 'react';
-import autobind from 'autobind-decorator';
-import { withRouter } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 import request from 'request';
 
 import CircularProgress from 'material-ui/CircularProgress';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
-
+import Refresh from '../stylecomponents/refresh'
+import autobind from 'autobind-decorator';
 import { getEhWebPage } from '../service/UrlService';
 import { getPageList } from '../service/PicService';
+import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 
 
 @withRouter
@@ -39,9 +40,10 @@ export default class Gallery extends Component {
   }
 
   render() {
+    console.log(Refresh)
     const showvPictures = picArray => (
       <div>
-        <button>{'刷新'}</button>
+         <Refresh>{'刷新'}</Refresh>
         <button onClick={() => this.galleryBack()}>{'返回上一级'}</button>
         {picArray.map(picObject => (
           <div key={picObject.name}>

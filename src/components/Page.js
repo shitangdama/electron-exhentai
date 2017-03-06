@@ -1,15 +1,16 @@
+import { Card, CardActions, CardHeader, CardMedia, CardText, CardTitle } from 'material-ui/Card';
 import React, { Component } from 'react';
-import autobind from 'autobind-decorator';
-import { withRouter } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 
 import request from 'request';
 
 import CircularProgress from 'material-ui/CircularProgress';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
-
+import Refresh from '../stylecomponents/refresh'
+import autobind from 'autobind-decorator';
 import { getEhWeb } from '../service/UrlService';
 import { getGalleriesList } from '../service/PicService';
+import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 
 @withRouter
 @inject('picStore')
@@ -40,7 +41,7 @@ export default class Page extends Component {
   render() {
     const showvGalleriesPic = picArray => (
       <div>
-        <button>{'刷新'}</button>
+        <Refresh>{'刷新'}</Refresh>
         {picArray.map(picObject => (
           <div key={picObject.name}>
             <Card onTouchTap={() => this.goGallery(picObject.url)}>
