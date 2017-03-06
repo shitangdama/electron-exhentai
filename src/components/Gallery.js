@@ -1,6 +1,7 @@
 import { Card, CardActions, CardHeader, CardMedia, CardText, CardTitle } from 'material-ui/Card';
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
+import request from 'request';
 
 import CircularProgress from 'material-ui/CircularProgress';
 import Refresh from '../stylecomponents/refresh'
@@ -10,8 +11,6 @@ import { getPageList } from '../service/PicService';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 
-const remote = window.require('electron').remote;
-const request = remote.require('request');
 
 @withRouter
 @inject('picStore')

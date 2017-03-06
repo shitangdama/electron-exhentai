@@ -2,14 +2,20 @@ import { Card, CardActions, CardHeader, CardMedia, CardText, CardTitle } from 'm
 import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 
+import request from 'request';
+
 import CircularProgress from 'material-ui/CircularProgress';
 import autobind from 'autobind-decorator';
 import { getEhWebPage } from '../service/UrlService';
 import { getPic } from '../service/PicService';
+<<<<<<< HEAD
 import { withRouter } from 'react-router-dom';
+=======
+// import { remote } from 'electron';
+>>>>>>> c8aa78b7aeb023e8fb2faf82dd6d0b1d3011350a
 
-const remote = window.require('electron').remote;
-const request = remote.require('request');
+// const remote = window.require('electron').remote;
+// const request = remote.require('request');
 
 @withRouter
 @inject('picStore')
@@ -45,6 +51,14 @@ export default class Picture extends Component {
   picBack() {
     this.props.push('/gallery');
   }
+  picOnError() {
+    // 失败会运行这个
+    console.log('Error');
+  }
+  picOnLoad() {
+    // 成功加载完毕会运行这个
+    console.log('picOnLoad');
+  }
 
   render() {
     const showPicture = () => (
@@ -56,6 +70,8 @@ export default class Picture extends Component {
           <img
             alt={this.props.picStore.Picture.pictureUrl}
             src={this.props.picStore.Picture.pictureUrl}
+            onLoad={this.picOnLoad}
+            onError={this.picOnError}
           />
         </Card>
       </div>

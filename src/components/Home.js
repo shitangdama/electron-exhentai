@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 import autobind from 'autobind-decorator';
 
+import request from 'request';
+
 import { getLoginInfo } from '../service/UrlService';
 
-const remote = window.require('electron').remote;
-const request = remote.require('request');
-// const tough = remote.require('tough-cookie');
-// const Cookie = tough.Cookie;
 
 const key = {
   method: 'gdata',
