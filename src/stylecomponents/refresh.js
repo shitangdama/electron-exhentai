@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
+const Refresh = styled.button`
   /* Adapt the colors based on primary prop */
   background: ${props => props.primary ? 'palevioletred' : 'white'};
   color: ${props => props.primary ? 'white' : 'palevioletred'};
@@ -11,4 +11,4 @@ const Button = styled.button`
   border-radius: 3px;
 `;
 
-export default Button;
+export default Refresh;

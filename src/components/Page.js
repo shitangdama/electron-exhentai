@@ -1,13 +1,14 @@
+import { Card, CardActions, CardHeader, CardMedia, CardText, CardTitle } from 'material-ui/Card';
 import React, { Component } from 'react';
-import autobind from 'autobind-decorator';
-import { withRouter } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 
 import CircularProgress from 'material-ui/CircularProgress';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
-
+import autobind from 'autobind-decorator';
 import { getEhWeb } from '../service/UrlService';
 import { getGalleriesList } from '../service/PicService';
+import refresh from '../stylecomponents/refresh'
+import styled from 'styled-components';
+import { withRouter } from 'react-router-dom';
 
 const remote = window.require('electron').remote;
 const request = remote.require('request');
@@ -41,7 +42,7 @@ export default class Page extends Component {
   render() {
     const showvGalleriesPic = picArray => (
       <div>
-        <button>{'刷新'}</button>
+        <refresh>{'刷新'}</refresh>
         {picArray.map(picObject => (
           <div key={picObject.name}>
             <Card onTouchTap={() => this.goGallery(picObject.url)}>

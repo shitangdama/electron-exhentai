@@ -1,25 +1,18 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-} from 'react-router-dom';
-
-import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-
-import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { Link, Route, BrowserRouter as Router } from 'react-router-dom';
 
 import AppBar from 'material-ui/AppBar';
-import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
-import IconButton from 'material-ui/IconButton';
-
-import Home from '../components/Home';
-import Page from '../components/Page';
+import Drawer from 'material-ui/Drawer';
 import Gallery from '../components/Gallery';
+import Home from '../components/Home';
+import IconButton from 'material-ui/IconButton';
+import MenuItem from 'material-ui/MenuItem';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
+import Page from '../components/Page';
 import Picture from '../components/Picture';
+import React from 'react';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme';
 
 const supportsHistory = 'pushState' in window.history;
 
