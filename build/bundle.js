@@ -27382,6 +27382,10 @@ var _CircularProgress = __webpack_require__(103);
 
 var _CircularProgress2 = _interopRequireDefault(_CircularProgress);
 
+var _refresh = __webpack_require__(133);
+
+var _refresh2 = _interopRequireDefault(_refresh);
+
 var _autobindDecorator = __webpack_require__(66);
 
 var _autobindDecorator2 = _interopRequireDefault(_autobindDecorator);
@@ -27389,10 +27393,6 @@ var _autobindDecorator2 = _interopRequireDefault(_autobindDecorator);
 var _UrlService = __webpack_require__(53);
 
 var _PicService = __webpack_require__(81);
-
-var _refresh = __webpack_require__(133);
-
-var _refresh2 = _interopRequireDefault(_refresh);
 
 var _styledComponents = __webpack_require__(131);
 
@@ -27457,7 +27457,7 @@ var Page = (_dec = (0, _mobxReact.inject)('picStore'), (0, _reactRouterDom.withR
           'div',
           null,
           _react2.default.createElement(
-            'refresh',
+            _refresh2.default,
             null,
             '刷新'
           ),

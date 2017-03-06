@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import { inject, observer } from 'mobx-react';
 
 import CircularProgress from 'material-ui/CircularProgress';
+import Refresh from '../stylecomponents/refresh'
 import autobind from 'autobind-decorator';
 import { getEhWeb } from '../service/UrlService';
 import { getGalleriesList } from '../service/PicService';
-import refresh from '../stylecomponents/refresh'
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 
@@ -42,7 +42,7 @@ export default class Page extends Component {
   render() {
     const showvGalleriesPic = picArray => (
       <div>
-        <refresh>{'刷新'}</refresh>
+        <Refresh>{'刷新'}</Refresh>
         {picArray.map(picObject => (
           <div key={picObject.name}>
             <Card onTouchTap={() => this.goGallery(picObject.url)}>
