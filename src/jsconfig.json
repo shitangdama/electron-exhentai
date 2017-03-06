@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {    
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "lib": ["es6", "dom"],
+    "module": "es6"
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

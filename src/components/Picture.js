@@ -1,13 +1,12 @@
+import { Card, CardActions, CardHeader, CardMedia, CardText, CardTitle } from 'material-ui/Card';
 import React, { Component } from 'react';
-import autobind from 'autobind-decorator';
-import { withRouter } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 
 import CircularProgress from 'material-ui/CircularProgress';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
-
+import autobind from 'autobind-decorator';
 import { getEhWebPage } from '../service/UrlService';
 import { getPic } from '../service/PicService';
+import { withRouter } from 'react-router-dom';
 
 const remote = window.require('electron').remote;
 const request = remote.require('request');
@@ -34,15 +33,15 @@ export default class Picture extends Component {
       }
     });
   }
-
+// 获取上一张图片
   getPrevPic() {
     this.getPic(this.props.picStore.Picture.prevPicUrl);
   }
-
+// 获取下一张图片
   getNextPic() {
     this.getPic(this.props.picStore.Picture.nextPicUrl);
   }
-
+// 返回上一级
   picBack() {
     this.props.push('/gallery');
   }
