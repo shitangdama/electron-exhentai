@@ -7,3 +7,5 @@ npm-debug*
 
 #ide
 /.vscode
+
+dist/bundle.js
